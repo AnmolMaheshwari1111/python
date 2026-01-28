@@ -39,7 +39,7 @@ This is a very common error when using MySQL 8.0 or newer.
 
 MySQL 8.0 changed its default password mechanism to something called caching_sha2_password, but many Python connectors (or specific configurations) still expect the older method (mysql_native_password).
 
-###Menu Options
+### Menu Options
 1. New Bill (Sale): Select products by ID and enter quantity. The system auto-deducts stock and calculates totals.
 
 3. Edit Bill: If a mistake is made, enter the Bill ID. The system restores the original stock and lets you re-enter the items correctly.
