@@ -3,6 +3,8 @@ from mysql.connector import Error
 import sys
 from datetime import datetime
 
+
+
 whatsmypass = input("Enter Database Password: ")
 # --- CONFIGURATION ---
 DB_HOST = "localhost"
@@ -57,7 +59,7 @@ def create_database_and_tables():
         if cursor.fetchone()[0] == 0:
             print("Populating dummy data...")
             sql = "INSERT INTO products (name, price, stock) VALUES (%s, %s, %s)"
-            val = [('Laptop', 800.00, 10), ('Mouse', 20.00, 50), ('HDMI Cable', 10.00, 100)]
+            val = [('Nothing', 9.99, 1)]
             cursor.executemany(sql, val)
             conn.commit()
 
